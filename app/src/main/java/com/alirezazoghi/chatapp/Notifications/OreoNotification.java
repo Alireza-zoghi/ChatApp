@@ -1,4 +1,4 @@
-package com.koddev.chatapp.Notifications;
+package com.alirezazoghi.chatapp.Notifications;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -12,7 +12,7 @@ import android.os.Build;
 
 public class OreoNotification extends ContextWrapper {
 
-    private static final String CHANNEL_ID = "com.koddev.chatapp";
+    private static final String CHANNEL_ID = "com.alirezazoghi.chat";
     private static final String CHANNEL_NAME = "chatapp";
 
     private NotificationManager notificationManager;

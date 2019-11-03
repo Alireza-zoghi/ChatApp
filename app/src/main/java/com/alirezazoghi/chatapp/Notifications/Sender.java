@@ -1,8 +1,8 @@
-package com.koddev.chatapp.Notifications;
+package com.alirezazoghi.chatapp.Notifications;
 
 public class Sender {
-    public Data data;
-    public String to;
+    private Data data;
+    private String to;
 
     public Sender(Data data, String to) {
         this.data = data;

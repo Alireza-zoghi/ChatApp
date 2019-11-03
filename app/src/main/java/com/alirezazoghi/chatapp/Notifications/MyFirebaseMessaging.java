@@ -1,4 +1,4 @@
-package com.koddev.chatapp.Notifications;
+package com.alirezazoghi.chatapp.Notifications;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.koddev.chatapp.MessageActivity;
+import com.alirezazoghi.chatapp.MessageActivity;
 
 public class MyFirebaseMessaging extends FirebaseMessagingService {
 
@@ -28,7 +28,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
         String user = remoteMessage.getData().get("user");
 
         SharedPreferences preferences = getSharedPreferences("PREFS", MODE_PRIVATE);
-        String currentUser = preferences.getString("currentuser", "none");
+        String currentUser = preferences.getString("currentUser", "none");
 
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -53,7 +53,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
         int j = Integer.parseInt(user.replaceAll("[\\D]", ""));
         Intent intent = new Intent(this, MessageActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("userid", user);
+        bundle.putString("userId", user);
         intent.putExtras(bundle);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_ONE_SHOT);
@@ -83,7 +83,7 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
         int j = Integer.parseInt(user.replaceAll("[\\D]", ""));
         Intent intent = new Intent(this, MessageActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("userid", user);
+        bundle.putString("userId", user);
         intent.putExtras(bundle);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_ONE_SHOT);
@@ -96,13 +96,14 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
                 .setAutoCancel(true)
                 .setSound(defaultSound)
                 .setContentIntent(pendingIntent);
-        NotificationManager noti = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager notificationM = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 
         int i = 0;
         if (j > 0){
             i = j;
         }
 
-        noti.notify(i, builder.build());
+        assert notificationM != null;
+        notificationM.notify(i, builder.build());
     }
 }

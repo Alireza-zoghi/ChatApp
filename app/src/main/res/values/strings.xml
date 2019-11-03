@@ -1,6 +1,31 @@
 <resources>
-    <string name="app_name">ChatApp</string>
+    <string name="app_name">برنامه گپ</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chats">گپ</string>
+    <string name="error">خطا</string>
+    <string name="exit">خروج</string>
+    <string name="login">ورود</string>
+    <string name="email">ایمیل</string>
+    <string name="password">رمز</string>
+    <string name="search">جستجو</string>
+    <string name="users">کاربران</string>
+    <string name="reset">بازیابی</string>
+    <string name="seen">خوانده شد</string>
+    <string name="profile">پروفایل</string>
+    <string name="register">ثبت نام</string>
+    <string name="deliver">ارسال شد</string>
+    <string name="username">نام کاربری</string>
+    <string name="loading">در حال بارگیری</string>
+    <string name="type_massage">متنی بنویسید</string>
+    <string name="reset_password">بازیابی رمز ورود!</string>
+    <string name="login_to_account">ورود به حساب کاربری</string>
+    <string name="create_account">حساب کاربری خود را بسازید</string>
+    <string name="check_email">لطفا ایمیل خود را برسی کنید.</string>
+    <string name="blank_message">امکان ارسال پیام خالی نیست!</string>
+    <string name="cannot_register">شما قادر به ثبت نام نیستید!</string>
+    <string name="authentication_failed">تأیید اعتبار انجام نشد!</string>
+    <string name="stronger_password">پسورد سخت تر را امتحان کنید.</string>
+    <string name="fields_are_required">پر کردن همه فیلد ها الزامیست!</string>
+    <string name="get_email_by_click_reset">با کلیک روی بازیابی ، یک ایمیل برای بازنشانی گذرواژه دریافت خواهید کرد</string>
+
 </resources>

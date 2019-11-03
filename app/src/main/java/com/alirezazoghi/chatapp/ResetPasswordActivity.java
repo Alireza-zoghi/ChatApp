@@ -1,12 +1,15 @@
-package com.koddev.chatapp;
+package com.alirezazoghi.chatapp;
 
 import android.content.Intent;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class ResetPasswordActivity extends AppCompatActivity {
 
     EditText send_email;
-    Button btn_reset;
 
     FirebaseAuth firebaseAuth;
 
@@ -28,27 +30,26 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Reset Password");
+        getSupportActionBar().setTitle(getString(R.string.reset_password));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         send_email = findViewById(R.id.send_email);
-        btn_reset = findViewById(R.id.btn_reset);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        btn_reset.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_reset).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = send_email.getText().toString();
 
-                if (email.equals("")){
-                    Toast.makeText(ResetPasswordActivity.this, "All fileds are required!", Toast.LENGTH_SHORT).show();
+                if (email.equals("")) {
+                    Toast.makeText(ResetPasswordActivity.this, getString(R.string.fields_are_required), Toast.LENGTH_SHORT).show();
                 } else {
                     firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
-                                Toast.makeText(ResetPasswordActivity.this, "Please check you Email", Toast.LENGTH_SHORT).show();
+                            if (task.isSuccessful()) {
+                                Toast.makeText(ResetPasswordActivity.this, getString(R.string.check_email), Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(ResetPasswordActivity.this, LoginActivity.class));
                             } else {
                                 String error = task.getException().getMessage();

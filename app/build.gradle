@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.koddev.chatapp"
+        applicationId "com.alirezazoghi.chatapp"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -41,7 +41,7 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    //implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //implementation 'com.github.bumptech.glide:glide:4.10.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'

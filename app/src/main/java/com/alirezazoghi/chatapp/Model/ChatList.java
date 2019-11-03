@@ -1,13 +1,13 @@
-package com.koddev.chatapp.Model;
+package com.alirezazoghi.chatapp.Model;
 
-public class Chatlist {
+public class ChatList {
     public String id;
 
-    public Chatlist(String id) {
+    public ChatList(String id) {
         this.id = id;
     }
 
-    public Chatlist() {
+    public ChatList() {
     }
 
     public String getId() {

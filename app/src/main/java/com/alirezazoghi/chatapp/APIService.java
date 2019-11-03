@@ -1,7 +1,7 @@
-package com.koddev.chatapp.Fragments;
+package com.alirezazoghi.chatapp;
 
-import com.koddev.chatapp.Notifications.MyResponse;
-import com.koddev.chatapp.Notifications.Sender;
+import com.alirezazoghi.chatapp.Notifications.MyResponse;
+import com.alirezazoghi.chatapp.Notifications.Sender;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

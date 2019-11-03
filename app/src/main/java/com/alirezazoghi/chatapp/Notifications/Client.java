@@ -1,4 +1,4 @@
-package com.koddev.chatapp.Notifications;
+package com.alirezazoghi.chatapp.Notifications;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.koddev.chatapp">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.alirezazoghi.chatapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name="com.alirezazoghi.chatapp.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,18 +22,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:parentActivityName=".StartActivity" />
-        <activity android:name=".MainActivity" />
+            android:name="com.alirezazoghi.chatapp.RegisterActivity"
+            android:parentActivityName="com.alirezazoghi.chatapp.StartActivity" />
+        <activity android:name="com.alirezazoghi.chatapp.MainActivity" />
         <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".StartActivity" />
-        <activity android:name=".MessageActivity" />
+            android:name="com.alirezazoghi.chatapp.LoginActivity"
+            android:parentActivityName="com.alirezazoghi.chatapp.StartActivity" />
+        <activity android:name="com.alirezazoghi.chatapp.MessageActivity" />
         <activity
-            android:name=".ResetPasswordActivity"
-            android:parentActivityName=".LoginActivity" />
+            android:name="com.alirezazoghi.chatapp.ResetPasswordActivity"
+            android:parentActivityName="com.alirezazoghi.chatapp.LoginActivity" />
 
-        <service android:name=".Notifications.MyFirebaseIdService"
+        <service android:name="com.alirezazoghi.chatapp.Notifications.MyFirebaseIdService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -40,7 +41,7 @@
             </intent-filter>
         </service>
 
-        <service android:name=".Notifications.MyFirebaseMessaging"
+        <service android:name="com.alirezazoghi.chatapp.Notifications.MyFirebaseMessaging"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

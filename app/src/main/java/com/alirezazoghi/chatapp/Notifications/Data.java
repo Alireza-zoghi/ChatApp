@@ -1,4 +1,4 @@
-package com.koddev.chatapp.Notifications;
+package com.alirezazoghi.chatapp.Notifications;
 
 public class Data {
     private String user;

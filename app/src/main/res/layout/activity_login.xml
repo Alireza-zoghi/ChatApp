@@ -3,69 +3,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/bar_layout"/>
+        layout="@layout/bar_layout" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:padding="16dp"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:layout_gravity="center"
+            android:text="@string/login_to_account"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="10dp"
-            app:met_floatingLabel="normal"
-            android:hint="Email"/>
-
-        <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/password"
-            android:inputType="textPassword"
             android:layout_marginTop="10dp"
-            app:met_floatingLabel="normal"
-            android:hint="Password"/>
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            app:met_floatingLabel="normal" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/password"
+            android:textAlignment="textEnd"
+            android:inputType="textPassword"
+            app:met_floatingLabel="normal" />
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="login"
-            android:id="@+id/btn_login"
+            android:layout_margin="10dp"
             android:background="@color/colorPrimaryDark"
-            android:layout_marginTop="10dp"
-            android:textColor="#fff"/>
+            android:text="@string/login"
+            android:textColor="#fff" />
 
         <TextView
+            android:id="@+id/forget_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Forgot you password?"
-            android:layout_marginTop="10dp"
             android:layout_gravity="end"
-            android:textStyle="bold"
-            android:id="@+id/forgot_password"
-            android:textColor="@color/colorPrimaryDark"/>
-
-
+            android:text="@string/reset_password"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_margin="8dp"
+            android:textSize="15sp"
+            android:textStyle="bold" />
     </LinearLayout>
-
-
-
 </RelativeLayout>
