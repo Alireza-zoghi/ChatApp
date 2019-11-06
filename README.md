@@ -1,5 +1,5 @@
 # ChatApp
-If it doesn't work, use a vpn😩
+<br>If it doesn't work, use a vpn😩
 I have deleted google-services.json. Add yours
 <br><b> Change Authorization:key with your key from firebase project</b>
 
